@@ -6,8 +6,10 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_ASSISTANT_ID = os.getenv("OPENAI_ASSISTANT_ID")
+
+# Fetch values from environment variables or Streamlit secrets
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY")
+OPENAI_ASSISTANT_ID = os.getenv("OPENAI_ASSISTANT_ID") or st.secrets.get("OPENAI_ASSISTANT_ID")
 
 # Set page config
 st.set_page_config(page_title="Minerba GPT", page_icon="🤖")
