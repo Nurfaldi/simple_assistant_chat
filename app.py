@@ -45,7 +45,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Chat input and processing
-if prompt := st.chat_input("What's up?"):
+if prompt := st.chat_input("Silahkan tulis pertanyaan anda disini"):
     # Check if assistant is initialized
     if not st.session_state.client or not st.session_state.assistant:
         st.error("Please initialize the assistant in the sidebar first")
