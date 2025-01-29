@@ -36,7 +36,7 @@ except Exception as e:
     st.error(f"Error initializing assistant: {str(e)}")
 
 # Main chat interface
-st.title("⛏️ Minerba GPT")
+st.title("⛏️ Minerba AI")
 # st.caption("🚀")
 
 # Display chat messages
